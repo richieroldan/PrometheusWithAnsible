@@ -10,8 +10,6 @@
 
 - hosts: controller
   become: yes
-  become_user: root
-  become_method: sudo
   vars:
     ansible_become_pass: password
   roles:
