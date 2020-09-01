@@ -15,5 +15,5 @@
   vars:
     ansible_become_pass: password
   roles:
-    - prometheus_blackbox_exporter
+    # - prometheus_blackbox_exporter
     - prometheus
