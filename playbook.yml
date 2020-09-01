@@ -1,19 +1,19 @@
 ---
-- hosts: servers
-  become: yes
-  become_user: root
-  become_method: sudo
-  vars:
-    ansible_become_pass: password
-  roles:
-    - prometheus_node_exporter
+# - hosts: servers
+#   become: yes
+#   become_user: root
+#   become_method: sudo
+#   vars:
+#     ansible_become_pass: password
+#   roles:
+#     - prometheus_node_exporter
 
-- hosts: localhost
+- hosts: controller
   become: yes
   become_user: root
   become_method: sudo
   vars:
     ansible_become_pass: password
   roles:
-    # - prometheus_blackbox_exporter
+    - prometheus_blackbox_exporter
     - prometheus
